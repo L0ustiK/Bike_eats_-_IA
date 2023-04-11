@@ -1,0 +1,13 @@
+Nom,Fruit/Légume,Couleur,Taille,Prix
+Banane,Fruit,Jaune,Petit,'0.50'
+Pomme,Fruit,Rouge,Moyen,'0.70'
+Orange,Fruit,Orange,Moyen,'0.60'
+Poire,Fruit,Vert,Moyen,'0.80'
+Fraise,Fruit,Rouge,Petit,'0.90'
+Raisin,Fruit,Vert,Petit,'1.00'
+Carotte,Légume,Orange,Petit,'0.40'
+Tomate,Légume,Rouge,Petit,'0.30'
+Brocoli,Légume,Vert,Moyen,'0.60'
+Chou-fleur,Légume,Blanc,Moyen,'0.70'
+Courgette,Légume,Vert,Moyen,'0.50'
+Aubergine,Légume,Violet,Moyen,'0.80'

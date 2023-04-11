@@ -1,0 +1,566 @@
+Rue Adolphe Jullien
+Rue Baillet
+Rue Bailleul
+Rue Baltard
+Rue Basse
+Rue Berger
+Rue Bertin Poiree
+Rue Boucher
+Rue Breve
+Rue Cambon
+Rue Catinat
+Rue Clemence Royer
+Rue Coq Heron
+Rue Coquilliere
+Rue Courtalon
+Rue Croix des Petits Champs
+Rue d Alger
+Rue d Argenteuil
+Rue Danielle Casanova
+Rue de Beaujolais
+Rue de Castiglione
+Rue de Harlay
+Rue de l Amiral Coligny
+Rue de l Arbre Sec
+Rue de l Arc En Ciel
+Rue de l Echelle
+Rue de l Equerre d Argent
+Rue de l Oculus
+Rue de l Oratoire
+Rue de l Orient Express
+Rue de la Boucle
+Rue de la Cossonnerie
+Rue de la Ferronnerie
+Rue de la Grande Truanderie
+Rue de la Lingerie
+Rue de la Monnaie
+Rue de la Petite Truanderie
+Rue de la Reynie
+Rue de la Sourdiere
+Rue de la Vrilliere
+Rue de Marengo
+Rue de Mondovi
+Rue de Montpensier
+Rue de Richelieu
+Rue de Rivoli
+Rue de Rohan
+Rue de Turbigo
+Rue de Valois
+Rue de Ventadour
+Rue de Viarmes
+Rue des 2 Boules
+Rue des Bons Enfants
+Rue des Bons Vivants
+Rue des Bourdonnais
+Rue des Capucines
+Rue des Dechargeurs
+Rue des Halles
+Rue des Innocents
+Rue des Lombards
+Rue des Moulins
+Rue des Orfevres
+Rue des Petits Champs
+Rue des Piliers
+Rue des Precheurs
+Rue des Pretres Saint G l Auxerrois
+Rue des Prouvaires
+Rue des Pyramides
+Rue du 29 Juillet
+Rue du Bouloi
+Rue du Chevalier de Saint George
+Rue du Cinema
+Rue du Colonel Driant
+Rue du Cygne
+Rue du Jour
+Rue du Louvre
+Rue du Marche Saint Honore
+Rue du Mont Thabor
+Rue du Pelican
+Rue du Plat d Etain
+Rue du Pont Neuf
+Rue du Roule
+Rue Duphot
+Rue Édouard Colonne
+Rue Etienne Marcel
+Rue Française
+Rue Gomboust
+Rue Henri Robert
+Rue Herold
+Rue Jean Jacques Rousseau
+Rue Jean Lantier
+Rue Jean Tison
+Rue la Feuillade
+Rue Lavandières Sainte Opportune
+Rue Mauconseil
+Rue Molière
+Rue Mondetour
+Rue Montesquieu
+Rue Montmartre
+Rue Montorgueil
+Rue Perrault
+Rue Pierre Lescot
+Rue Pirouette
+Rue Poquelin
+Rue Radziwill
+Rue Rambuteau
+Rue Rouget de Lisle
+Rue Saint Denis
+Rue Saint Florentin
+Rue Saint Germain l Auxerrois
+Rue Saint Honore
+Rue Saint Hyacinthe
+Rue Saint Roch
+Rue Sainte Anne
+Rue Sainte Opportune
+Rue Sauval
+Rue Therese
+Rue Vauvilliers
+Rue Bachaumont
+Rue Beauregard
+Rue Blondel
+Rue Brongniart
+Rue Chabanais
+Rue Chenier
+Rue Cherubini
+Rue Colbert
+Rue d Aboukir
+Rue d Alexandrie
+Rue d Amboise
+Rue d Antin
+Rue d Argout
+Rue d Uzes
+Rue Dalayrac
+Rue Danielle Casanova
+Rue Daunou
+Rue de Choiseul
+Rue de Clery
+Rue de Damiette
+Rue de Gramont
+Rue de Hanovre
+Rue de la Banque
+Rue de la Bourse
+Rue de la Jussienne
+Rue de la Lune
+Rue de la Michodiere
+Rue de la Paix
+Rue de la Ville Neuve
+Rue de Louvois
+Rue de Marivaux
+Rue de Mulhouse
+Rue de Palestro
+Rue de Port Mahon
+Rue de Richelieu
+Rue de Tracy
+Rue de Turbigo
+Rue des Capucines
+Rue des Colonnes
+Rue des Degres
+Rue des Filles Saint Thomas
+Rue des Forges
+Rue des Jeuneurs
+Rue des Panoramas
+Rue des Petits Carreaux
+Rue des Petits Champs
+Rue des Petits Peres
+Rue du 4 Septembre
+Rue du Caire
+Rue du Croissant
+Rue du Louvre
+Rue du Mail
+Rue du Nil
+Rue du Ponceau
+Rue du Sentier
+Rue Dussoubs
+Rue Etienne Marcel
+Rue Favart
+Rue Feydeau
+Rue Française
+Rue Gaillon
+Rue Greneta
+Rue Gretry
+Rue Guerin Boisseau
+Rue la Feuillade
+Rue Léon Cladel
+Rue Leopold Bellan
+Rue Louis le Grand
+Rue Lulli
+Rue Mandar
+Rue Marie Stuart
+Rue Marsollier
+Rue Mehul
+Rue Menars
+Rue Monsigny
+Rue Montmartre
+Rue Montorgueil
+Rue Notre Dame de Bonne Nouvelle
+Rue Notre Dame de Recouvrance
+Rue Notre Dame des Victoires
+Rue Paul Lelong
+Rue Poissonniere
+Rue Rameau
+Rue Reaumur
+Rue Saint Augustin
+Rue Saint Denis
+Rue Saint Fiacre
+Rue Saint Joseph
+Rue Saint Marc
+Rue Saint Philippe
+Rue Saint Sauveur
+Rue Saint Spire
+Rue Sainte Anne
+Rue Sainte Apolline
+Rue Sainte Foy
+Rue Thorel
+Rue Tiquetonne
+Rue Vide Gousset
+Rue Vivienne
+Rue Au Maire
+Rue Aux Ours
+Rue Bailly
+Rue Barbette
+Rue Beaubourg
+Rue Beranger
+Rue Bernard de Clairvaux
+Rue Blondel
+Rue Borda
+Rue Brantome
+Rue Caffarelli
+Rue Chapon
+Rue Charles François Dupuis
+Rue Charlot
+Rue Commines
+Rue Conte
+Rue Cunin Gridaine
+Rue de Bearn
+Rue de Beauce
+Rue de Braque
+Rue de Bretagne
+Rue de Franche Comte
+Rue de Hesse
+Rue de la Corderie
+Rue de la Perle
+Rue de Montmorency
+Rue de Normandie
+Rue de Picardie
+Rue de Poitou
+Rue de Saintonge
+Rue de Sevigne
+Rue de Thorigny
+Rue de Turbigo
+Rue de Turenne
+Rue Debelleyme
+Rue des 4 Fils
+Rue des Archives
+Rue des Arquebusiers
+Rue des Coutures Saint Gervais
+Rue des Filles du Calvaire
+Rue des Fontaines du Temple
+Rue des Francs Bourgeois
+Rue des Gravilliers
+Rue des Haudriettes
+Rue des Minimes
+Rue des Oiseaux
+Rue des Tournelles
+Rue des Vertus
+Rue du Bourg l Abbe
+Rue du Foin
+Rue du Forez
+Rue du Grand Veneur
+Rue du Grenier Saint Lazare
+Rue du Parc Royal
+Rue du Pas de la Mule
+Rue du Perche
+Rue du Pont Aux Choux
+Rue du Roi Dore
+Rue du Temple
+Rue du Vertbois
+Rue Dupetit Thouars
+Rue Elzevir
+Rue Eugene Spuller
+Rue Ferdinand Berthoud
+Rue Froissart
+Rue Gabriel Vicaire
+Rue Greneta
+Rue Meslay
+Rue Michel le Comte
+Rue Montgolfier
+Rue Notre Dame de Nazareth
+Rue Papin
+Rue Pastourelle
+Rue Paul Dubois
+Rue Payenne
+Rue Perree
+Rue Portefoin
+Rue Quincampoix
+Rue Rambuteau
+Rue Reaumur
+Rue Roger Verlomme
+Rue Saint Claude
+Rue Saint Gilles
+Rue Saint Martin
+Rue Sainte Anastase
+Rue Sainte Apolline
+Rue Sainte Elisabeth
+Rue Salomon de Caus
+Rue Vaucanson
+Rue Vieille du Temple
+Rue Villehardouin
+Rue Volta
+Rue Adolphe Adam
+Rue Agrippa d Aubigne
+Rue Aubriot
+Rue Aubry le Boucher
+Rue Bassompierre
+Rue Beaubourg
+Rue Beautreillis
+Rue Boutarel
+Rue Brisemiche
+Rue Bude
+Rue Caron
+Rue Castex
+Rue Chanoinesse
+Rue Charlemagne
+Rue Charles V
+Rue Cloche Perce
+Rue Crillon
+Rue d Arcole
+Rue d Ormesson
+Rue de Birague
+Rue de Bretonvilliers
+Rue de Brissac
+Rue de Brosse
+Rue de Fourcy
+Rue de Jarente
+Rue de Jouy
+Rue de l Abbe Migne
+Rue de l Arsenal
+Rue de l Ave Maria
+Rue de l Hôtel de Ville
+Rue de l Hôtel Saint Paul
+Rue de la Bastille
+Rue de la Cerisaie
+Rue de la Cite
+Rue de la Colombe
+Rue de la Coutellerie
+Rue de la Reynie
+Rue de la Tacherie
+Rue de la Verrerie
+Rue de Lesdiguieres
+Rue de Lobau
+Rue de Lutece
+Rue de Moussy
+Rue de Rivoli
+Rue de Schomberg
+Rue de Sevigne
+Rue de Sully
+Rue de Turenne
+Rue de Venise
+Rue des 2 Ponts
+Rue des Archives
+Rue des Barres
+Rue des Blancs Manteaux
+Rue des Chantres
+Rue des Ecouffes
+Rue des Francs Bourgeois
+Rue des Guillemites
+Rue des Hospitalieres Saint Gervais
+Rue des Jardins Saint Paul
+Rue des Juges Consuls
+Rue des Lions Saint Paul
+Rue des Lombards
+Rue des Mauvais Garcons
+Rue des Nonnains d Hyeres
+Rue des Rosiers
+Rue des Tournelles
+Rue des Ursins
+Rue du Bourg Tibourg
+Rue du Cloitre Notre Dame
+Rue du Cloitre Saint Merri
+Rue du Fauconnier
+Rue du Figuier
+Rue du Marc des Blancs Manteaux
+Rue du Pas de la Mule
+Rue du Petit Musc
+Rue du Platre
+Rue du Pont Louis Philippe
+Rue du Prevot
+Rue du Renard
+Rue du Roi de Sicile
+Rue du Temple
+Rue du Tresor
+Rue Eginhard
+Rue Ferdinand Duval
+Rue François Miron
+Rue Geoffroy l Angevin
+Rue Geoffroy l Asnier
+Rue Jacques Coeur
+Rue Jean Beausire
+Rue Jean du Bellay
+Rue Jules Cousin
+Rue le Regrattier
+Rue Malher
+Rue Massillon
+Rue Mornay
+Rue Necker
+Rue Neuve Saint Pierre
+Rue Nicolas Flamel
+Rue Pavee
+Rue Pecquay
+Rue Pernelle
+Rue Pierre Au Lard
+Rue Poulletier
+Rue Quincampoix
+Rue Rambuteau
+Rue Saint Antoine
+Rue Saint Bon
+Rue Saint Louis En l Ile
+Rue Saint Martin
+Rue Saint Merri
+Rue Saint Paul
+Rue Sainte Croix de la Bretonnerie
+Rue Simon le Franc
+Rue Tiron
+Rue Amyot
+Rue Basse des Carmes
+Rue Berthollet
+Rue Blainville
+Rue Boutebrie
+Rue Broca
+Rue Buffon
+Rue Censier
+Rue Champollion
+Rue Claude Bernard
+Rue Clotaire
+Rue Clotilde
+Rue Clovis
+Rue Cochin
+Rue Cujas
+Rue Cuvier
+Rue d Arras
+Rue d Ecosse
+Rue d Ulm
+Rue Dante
+Rue Daubenton
+Rue de Bazeilles
+Rue de Bievre
+Rue de Candolle
+Rue de Cluny
+Rue de l Abbe de l Epee
+Rue de l Arbalete
+Rue de l École Polytechnique
+Rue de l Epee de Bois
+Rue de l Essai
+Rue de l Estrapade
+Rue de l Hôtel Colbert
+Rue de la Bucherie
+Rue de la Clef
+Rue de la Collegiale
+Rue de la Harpe
+Rue de la Huchette
+Rue de la Montagne Sainte Genevieve
+Rue de la Parcheminerie
+Rue de la Sorbonne
+Rue de Lanneau
+Rue de Latran
+Rue de Mirbel
+Rue de Navarre
+Rue de Poissy
+Rue de Pontoise
+Rue de Quatrefages
+Rue de Valence
+Rue des 3 Portes
+Rue des Anglais
+Rue des Arenes
+Rue des Bernardins
+Rue des Boulangers
+Rue des Carmes
+Rue des Chantiers
+Rue des Écoles
+Rue des Feuillantines
+Rue des Fosses Saint Bernard
+Rue des Fosses Saint Jacques
+Rue des Fosses Saint Marcel
+Rue des Grands Degres
+Rue des Irlandais
+Rue des Lyonnais
+Rue des Patriarches
+Rue des Pretres Saint Severin
+Rue des Ursulines
+Rue Descartes
+Rue Dolomieu
+Rue Domat
+Rue du Cardinal Lemoine
+Rue du Chat Qui Peche
+Rue du Cimetière Saint Benoist
+Rue du Fer A Moulin
+Rue du Fouarre
+Rue du Gril
+Rue du Haut Pave
+Rue du Marche des Patriarches
+Rue du Pere Teilhard de Chardin
+Rue du Petit Moine
+Rue du Petit Pont
+Rue du Pot de Fer
+Rue du Puits de l Ermite
+Rue du Sommerard
+Rue du Val de Grace
+Rue Édouard Quenu
+Rue Erasme
+Rue Flatters
+Rue Frédéric Sauton
+Rue Fustel de Coulanges
+Rue Galande
+Rue Gay Lussac
+Rue Geoffroy Saint Hilaire
+Rue Georges Desplas
+Rue Gracieuse
+Rue Guy de la Brosse
+Rue Henri Barbusse
+Rue Jacques Henri Lartigue
+Rue Jean Calvin
+Rue Jean de Beauvais
+Rue Jussieu
+Rue Lacepede
+Rue Lagarde
+Rue Lagrange
+Rue Laplace
+Rue Laromiguiere
+Rue Larrey
+Rue le Goff
+Rue Lhomond
+Rue Linne
+Rue Louis Thuillier
+Rue Maitre Albert
+Rue Malebranche
+Rue Malus
+Rue Monge
+Rue Mouffetard
+Rue Nicolas Houel
+Rue Ortolan
+Rue Paillet
+Rue Pascal
+Rue Pestalozzi
+Rue Pierre Brossolette
+Rue Pierre Et Marie Curie
+Rue Pierre Nicole
+Rue Poliveau
+Rue Rataud
+Rue Rollin
+Rue Royer Collard
+Rue Saint Etienne du Mont
+Rue Saint Jacques
+Rue Saint Julien le Pauvre
+Rue Saint Medard
+Rue Saint Severin
+Rue Saint Victor
+Rue Santeuil
+Rue Scipion
+Rue Soufflot
+Rue Thenard
+Rue Thouin
+Rue Toullier
+Rue Tournefort
+Rue Valette
+Rue Vauquelin
+Rue Vesale
+Rue Victor Cousin
