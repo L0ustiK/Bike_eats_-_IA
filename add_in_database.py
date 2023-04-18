@@ -90,7 +90,10 @@ if __name__ == '__main__':
 
 
     #encoding_one_hot('Categorie.csv')
-    neuron_network('Categorie.csv')
+    naive_bayes_models('Categorie_1.csv')
+    decision_tree_classifier('Categorie_1.csv')
+    logistic_regression_classifier('Categorie_1.csv')
+
 
     '''
     data_base = "db_bike_eat"

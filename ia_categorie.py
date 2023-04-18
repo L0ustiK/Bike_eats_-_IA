@@ -1,9 +1,34 @@
+import nltk
 import pandas as pd
 import numpy as np
-import keras
 from sklearn.model_selection import train_test_split
-from keras.models import Sequential
-from keras.layers import Dense
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+
+
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+stop_words = set(stopwords.words('french'))
+lemmatizer = WordNetLemmatizer()
+
+
+def preprocess(text):
+    # Convertir en minuscules
+    text = text.lower()
+    # Supprimer la ponctuation
+    text = ''.join([c for c in text if c not in ('!', '.', ':', ',', ';', '?', '-', '_', '/', '\\', '(', ')', '[', ']', '{', '}')])
+    # Supprimer les mots vides
+    text = ' '.join([word for word in text.split() if word not in stop_words])
+    # Lemmatiser
+    text = ' '.join([lemmatizer.lemmatize(word) for word in text.split()])
+    return text
 
 
 def encoding_one_hot(file_name):
@@ -34,28 +59,106 @@ def encoding_one_hot(file_name):
 
     return result
 
-def neuron_network(file_name):
+def  naive_bayes_models(file_name):
 
     data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
 
-    data.dtypes
+    plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+
+    one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
+
+    one_tab = one_tab.dropna(subset=['plat'])
     
-    x = data.drop('Categorie', axis = 1)
-    y = data['Categorie']
+    x = one_tab['plat']
+    y = one_tab['Categorie']
 
-    train_data, test_data, train_labels, test_labels = train_test_split(x,y, test_size=0.2, random_state=20)
+    train_data,test_data,train_labels,test_labels = train_test_split(x,y, test_size=0.2, random_state=42)
 
-    model = Sequential()
-    model.add(Dense(64, activation="relu", input_shape=(len(train_data.columns),)))
-    model.add(Dense(32, activation="relu"))
-    model.add(Dense(1, activation="sigmoid"))
-
-    # Compiler le modèle
-    model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
-
-    # Entraîner le modèle
-    model.fit(train_data, train_labels, epochs=10, batch_size=32, validation_data=(test_data, test_labels))
+    train_data = train_data.apply(preprocess)
+    test_data = test_data.apply(preprocess)
 
 
+    vectorizer = CountVectorizer()
+    x_train_vectorized = vectorizer.fit_transform(train_data)
+    x_test_vectorized = vectorizer.transform(test_data)
+    
+
+    model = MultinomialNB()
+    model.fit(x_train_vectorized, train_labels)
+
+    y_pred = model.predict(x_test_vectorized)
 
 
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=5)
+    print("Scores de validation croisée :", scores)
+    print("Moyenne des scores de validation croisée :", scores.mean())
+    print('\n')
+
+
+
+
+def decision_tree_classifier(file_name):
+
+
+    data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
+
+    plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+
+    one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
+    one_tab = one_tab.dropna(subset=['plat'])
+
+    x = one_tab['plat']
+    y = one_tab['Categorie']
+
+    train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=5)
+
+    train_data = train_data.apply(preprocess)
+    test_data = test_data.apply(preprocess)
+
+
+    vectorizer = CountVectorizer()
+    x_train_vectorized = vectorizer.fit_transform(train_data)
+    x_test_vectorized = vectorizer.transform(test_data)
+
+    model = DecisionTreeClassifier(max_depth=100, min_samples_split=10)
+    model.fit(x_train_vectorized, train_labels)
+
+    y_pred = model.predict(x_test_vectorized)
+
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=5)
+    print("Scores de validation croisée :", scores)
+    print("Moyenne des scores de validation croisée :", scores.mean())
+    print('\n')
+
+
+
+def logistic_regression_classifier(file_name):
+    data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
+
+    plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+
+    one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
+    one_tab = one_tab.dropna(subset=['plat'])
+
+    x = one_tab['plat']
+    y = one_tab['Categorie']
+
+    train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=42)
+
+    train_data = train_data.apply(preprocess)
+    test_data = test_data.apply(preprocess)
+
+
+    vectorizer = CountVectorizer()
+    x_train_vectorized = vectorizer.fit_transform(train_data)
+    x_test_vectorized = vectorizer.transform(test_data)
+
+    model = LogisticRegression()
+    model.fit(x_train_vectorized, train_labels)
+
+    y_pred = model.predict(x_test_vectorized)
+
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=5)
+    print("Scores de validation croisée :", scores)
+    print("Moyenne des scores de validation croisée :", scores.mean())
+    print('\n')

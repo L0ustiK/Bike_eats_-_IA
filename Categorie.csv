@@ -1,10 +1,37 @@
 Categorie,Plat 1,Plat 2,Plat 3,Plat 4,Plat 5,Plat 6
 Italien,Lasagne,Pizza,Penne alla vodka,Osso buco,Tiramisu,Parmigiano reggiano
+Italien,Spaghetti carbonara,Risotto,Focaccia,Caponata,Panna cotta,Gelato
+Italien,Tagliatelle al ragu,Gnocchi,Bruschetta,Minestrone,Grissini,Saltimbocca
 Fast-Food,Frites,Burger,Hot-dog,Tacos,Onion rings,Coca-cola
+Fast-Food,Chicken nuggets,Fish and chips,Club sandwich,Wrap,Poutine,Milkshake
+Fast-Food,Chili cheese fries,BLT sandwich,Gyro,Monte Cristo sandwich,Slushie,Cola
 Americain,Fried chicken,BBQ ribs,Mac and cheese,Cornbread,Pecan pie,Coca-cola
-Chinois,Poulet Kung Pao,Canard laque,Chow mein,Tofu saute�,Soupe Won-ton,Tha� au jasmin
-Japonais,Sushi,Soupe miso,Tempura,Ramen,Udon,Mochi glace�
+Americain,Meatloaf,Clam chowder,Buffalo wings,Jambalaya,Key lime pie,Root beer
+Americain,Philly cheesesteak,Po' boy,Reuben sandwich,Cobb salad,Apple pie,Iced tea
+Chinois,Poulet Kung Pao,Canard laque,Chow mein,Tofu saute,Soupe Won-ton,Thai au jasmin
+Chinois,Dim sum,Riz cantonais,Mapo tofu,Soupe aigre-piquante,Chop suey,Riz gluant
+Chinois,Baozi,Poulet General Tso,Fondue chinoise,Peking ravioli,Rouleaux de printemps,Riz saute
+Japonais,Sushi,Soupe miso,Tempura,Ramen,Udon,Mochi glace
+Japonais,Sashimi,Okonomiyaki,Takoyaki,Onigiri,Yakitori,Green tea ice cream
+Japonais,Katsu curry,Gyoza,Kaiseki,Shabu-shabu,Tonkatsu,Soba
 Indien,Butter chicken,Biryani,Saag paneer,Naan,Pakora,Mango lassi
+Indien,Dal makhani,Rogan josh,Masoor dal,Chapati,Gulab jamun,Chai
+Indien,Chana masala,Keema,Paneer tikka,Kulfi,Idli,Rasmalai
 Mexicain,Tacos al pastor,Guacamole,Tortillas,Enchiladas,Tamales,Corona
+Mexicain,Chiles rellenos,Ceviche,Chimichanga,Churros,Carnitas,Michelada
+Mexicain,Carne asada,Quesadilla,Fajitas,Nachos,Flan,Tequila
 Grecque,Tzatziki,Salade grecque,Moussaka,Gyro,Pita,Retzina
-Francais,Boeuf bourguignon,Coq au vin,Ratatouille,Quiche lorraine,Croissant,Cafe� au lait
+Grecque,Dolmades,Baklava,Spanakopita,Souvlaki,Pastitsio,Mythos
+Grecque,Keftedes,Saganaki,Horiatiki,Loukoumades,Kleftiko,Frappe
+Francais,Boeuf bourguignon,Coq au vin,Ratatouille,Quiche lorraine,Croissant,Cafe au lait
+Francais,Pot-au-feu,Tarte Tatin,Soupe à l'oignon,Gratin Dauphinois,Escargots de Bourgogne,Calvados
+Francais,Cassoulet,Blanquette de veau,Bouillabaisse,Salade Niçoise,Crème brulee,Champagne
+Thaïlandais,Pad thaï,Massaman curry,Green curry,Red curry,Mango sticky rice,Tom kha gai
+Thaïlandais,Laab,Larb,Papaya salad,Tom yum goong,Pad see ew,Thai iced tea
+Thaïlandais,Grilled pork,Pineapple fried rice,Khao soi,Satay,Green papaya salad,Thai coffee
+Vietnamien,Pho,Banh mi,Bun cha,Ca kho to,Spring rolls,Chè ba màu
+Vietnamien,Banh xeo,Bun bo hue,Banh cuon,Cha gio,Summer rolls,Vietnamese iced coffee
+Vietnamien,Pho ga,Cao lau,Com tam,Banh khot,Bun rieu,Chè trôi nước
+Coréen,Kimchi,Bulgogi,Bibimbap,Kimchi jjigae,Tteokbokki,Soju
+Coréen,Galbi,Japchae,Naengmyeon,Samgyeopsal,Kimbap,Makgeolli
+
