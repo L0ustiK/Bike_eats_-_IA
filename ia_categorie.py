@@ -1,10 +1,10 @@
 import nltk
 import pandas as pd
 import numpy as np
+from collections import Counter
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
@@ -63,15 +63,14 @@ def  naive_bayes_models(file_name):
 
     data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
 
-    plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+    #plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
 
-    one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
+    #one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
 
-    one_tab = one_tab.dropna(subset=['plat'])
+    #one_tab = one_tab.dropna(subset=['plat'])
     
-    x = one_tab['plat']
-    y = one_tab['Categorie']
-
+    x = data['dish']
+    y = data['country']
     train_data,test_data,train_labels,test_labels = train_test_split(x,y, test_size=0.2, random_state=42)
 
     train_data = train_data.apply(preprocess)
@@ -89,7 +88,7 @@ def  naive_bayes_models(file_name):
     y_pred = model.predict(x_test_vectorized)
 
 
-    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=5)
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=10)
     print("Scores de validation croisée :", scores)
     print("Moyenne des scores de validation croisée :", scores.mean())
     print('\n')
@@ -102,15 +101,15 @@ def decision_tree_classifier(file_name):
 
     data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
 
-    plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+    #plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
 
-    one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
-    one_tab = one_tab.dropna(subset=['plat'])
+    #one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
+    #one_tab = one_tab.dropna(subset=['plat'])
 
-    x = one_tab['plat']
-    y = one_tab['Categorie']
+    x = data['dish']
+    y = data['country']
 
-    train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=5)
+    train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=42)
 
     train_data = train_data.apply(preprocess)
     test_data = test_data.apply(preprocess)
@@ -120,28 +119,45 @@ def decision_tree_classifier(file_name):
     x_train_vectorized = vectorizer.fit_transform(train_data)
     x_test_vectorized = vectorizer.transform(test_data)
 
-    model = DecisionTreeClassifier(max_depth=100, min_samples_split=10)
+    model = DecisionTreeClassifier(max_depth=250, min_samples_split=2)
     model.fit(x_train_vectorized, train_labels)
 
     y_pred = model.predict(x_test_vectorized)
 
-    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=5)
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=10)
     print("Scores de validation croisée :", scores)
     print("Moyenne des scores de validation croisée :", scores.mean())
+
     print('\n')
+
+
+
+def predict_dish_category(dish_names, model, vectorizer):
+    # Prétraiter les noms des plats et les transformer en utilisant le vectoriseur ajusté
+    preprocessed_dishes = [preprocess(dish_name) for dish_name in dish_names]
+    dish_vectorized = vectorizer.transform(preprocessed_dishes)
+    
+    # Prédire la catégorie pour chaque plat en utilisant le modèle entraîné
+    category_predictions = model.predict(dish_vectorized)
+    
+    # Obtenir les catégories uniques
+    unique_categories = set(category_predictions)
+    
+    return unique_categories
+
 
 
 
 def logistic_regression_classifier(file_name):
     data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
 
-    plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+    #plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
 
-    one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
-    one_tab = one_tab.dropna(subset=['plat'])
+    #one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
+    #one_tab = one_tab.dropna(subset=['plat'])
 
-    x = one_tab['plat']
-    y = one_tab['Categorie']
+    x = data['dish']
+    y = data['country']
 
     train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=42)
 
@@ -158,7 +174,13 @@ def logistic_regression_classifier(file_name):
 
     y_pred = model.predict(x_test_vectorized)
 
-    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=5)
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=10)
     print("Scores de validation croisée :", scores)
     print("Moyenne des scores de validation croisée :", scores.mean())
     print('\n')
+
+
+    # Exemple d'utilisation de la fonction
+    dish_name = ["boeuf bourg"]
+    category = predict_dish_category(dish_name, model, vectorizer)
+    print(f"La catégorie prédite pour '{dish_name}' est : {category}")

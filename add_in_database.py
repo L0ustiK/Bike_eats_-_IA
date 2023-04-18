@@ -4,8 +4,6 @@ import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
 
-from ia_categorie import *
-
 DATE_MIN = [2020,1,1]
 DATE_MAX = [2023,4,4]
 
@@ -87,13 +85,6 @@ if __name__ == '__main__':
 
     df_restaurant['Principal_categorie'] = restaurant_categories
     df_restaurant.insert(0, 'ID', range(1, 1 + len(df_restaurant)))
-
-
-    #encoding_one_hot('Categorie.csv')
-    naive_bayes_models('Categorie_1.csv')
-    decision_tree_classifier('Categorie_1.csv')
-    logistic_regression_classifier('Categorie_1.csv')
-
 
     '''
     data_base = "db_bike_eat"
