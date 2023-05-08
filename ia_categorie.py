@@ -10,16 +10,18 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+import ssl
 
-
+ssl._create_default_https_context = ssl._create_unverified_context
 nltk.download('stopwords')
 nltk.download('wordnet')
 
-stop_words = set(stopwords.words('french'))
+stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 
-def preprocess(text):
+def preprocess(ingredients_list):
+    text = ','.join(ingredients_list)
     # Convertir en minuscules
     text = text.lower()
     # Supprimer la ponctuation
@@ -33,9 +35,8 @@ def preprocess(text):
 
 def encoding_one_hot(file_name):
 
-    df = pd.read_csv(file_name, sep=',', encoding='utf8')
-    
-    # Récup catégorie
+    df =  pd.read_csv(file_name, sep=",", encoding="utf-8")
+
     categories = df.iloc[:,1:]
     
     # Garder 1 seul exemplaire
@@ -61,7 +62,7 @@ def encoding_one_hot(file_name):
 
 def  naive_bayes_models(file_name):
 
-    data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
+    data =  pd.read_json(file_name)
 
     #plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
 
@@ -69,8 +70,8 @@ def  naive_bayes_models(file_name):
 
     #one_tab = one_tab.dropna(subset=['plat'])
     
-    x = data['dish']
-    y = data['country']
+    x = data['ingredients']
+    y = data['cuisine']
     train_data,test_data,train_labels,test_labels = train_test_split(x,y, test_size=0.2, random_state=42)
 
     train_data = train_data.apply(preprocess)
@@ -87,27 +88,24 @@ def  naive_bayes_models(file_name):
 
     y_pred = model.predict(x_test_vectorized)
 
-
     scores = cross_val_score(model, x_train_vectorized, train_labels, cv=10)
     print("Scores de validation croisée :", scores)
     print("Moyenne des scores de validation croisée :", scores.mean())
     print('\n')
 
 
-
-
 def decision_tree_classifier(file_name):
 
 
-    data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
+    data = pd.read_json(file_name)
 
     #plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
 
     #one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
     #one_tab = one_tab.dropna(subset=['plat'])
 
-    x = data['dish']
-    y = data['country']
+    x = data['ingredients']
+    y = data['cuisine']
 
     train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=42)
 
@@ -124,7 +122,7 @@ def decision_tree_classifier(file_name):
 
     y_pred = model.predict(x_test_vectorized)
 
-    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=10)
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=3)
     print("Scores de validation croisée :", scores)
     print("Moyenne des scores de validation croisée :", scores.mean())
 
@@ -132,55 +130,36 @@ def decision_tree_classifier(file_name):
 
 
 
-def predict_dish_category(dish_names, model, vectorizer):
-    # Prétraiter les noms des plats et les transformer en utilisant le vectoriseur ajusté
-    preprocessed_dishes = [preprocess(dish_name) for dish_name in dish_names]
-    dish_vectorized = vectorizer.transform(preprocessed_dishes)
-    
-    # Prédire la catégorie pour chaque plat en utilisant le modèle entraîné
-    category_predictions = model.predict(dish_vectorized)
-    
-    # Obtenir les catégories uniques
-    unique_categories = set(category_predictions)
-    
-    return unique_categories
-
+def predict_dish_category_with_ingredients(dish_name, ingredients, model, vectorizer):
+    dish_name_and_ingredients = dish_name + " " + " ".join(ingredients)
+    preprocessed_dish = preprocess(dish_name_and_ingredients)
+    dish_vectorized = vectorizer.transform([preprocessed_dish])
+    predicted_category = model.predict(dish_vectorized)
+    return predicted_category[0]
 
 
 
 def logistic_regression_classifier(file_name):
-    data = pd.read_csv(file_name, sep=',', encoding='unicode_escape')
+    data = pd.read_json(file_name)
 
-    #plat_columns = ['Plat '+str(n) for n in range(1,len(data.columns)-1)]
+    x = data['ingredients']
+    y = data['cuisine']
 
-    #one_tab = pd.melt(data, id_vars=['Categorie'], value_vars=plat_columns, var_name='plat col', value_name='plat')
-    #one_tab = one_tab.dropna(subset=['plat'])
-
-    x = data['dish']
-    y = data['country']
-
-    train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.2, random_state=42)
+    train_data, test_data, train_labels, test_labels = train_test_split(x, y, test_size=0.25, random_state=3)
 
     train_data = train_data.apply(preprocess)
     test_data = test_data.apply(preprocess)
-
 
     vectorizer = CountVectorizer()
     x_train_vectorized = vectorizer.fit_transform(train_data)
     x_test_vectorized = vectorizer.transform(test_data)
 
-    model = LogisticRegression()
+    model = LogisticRegression(max_iter=1000)
     model.fit(x_train_vectorized, train_labels)
 
     y_pred = model.predict(x_test_vectorized)
 
-    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=10)
+    scores = cross_val_score(model, x_train_vectorized, train_labels, cv=3)
     print("Scores de validation croisée :", scores)
     print("Moyenne des scores de validation croisée :", scores.mean())
     print('\n')
-
-
-    # Exemple d'utilisation de la fonction
-    dish_name = ["boeuf bourg"]
-    category = predict_dish_category(dish_name, model, vectorizer)
-    print(f"La catégorie prédite pour '{dish_name}' est : {category}")
